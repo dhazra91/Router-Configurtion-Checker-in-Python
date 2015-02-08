@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Documentation &mdash; Compliance Checker 1.0.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="Compliance Checker 1.0.0 documentation" href="index.html" />
+    <link rel="prev" title="Project Summary" href="project.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="project.html" title="Project Summary"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">Compliance Checker 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-welcome">
+<span id="documentation"></span><h1>Documentation<a class="headerlink" href="#module-welcome" title="Permalink to this headline">¶</a></h1>
+<dl class="function">
+<dt id="welcome.display">
+<code class="descclassname">welcome.</code><code class="descname">display</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#welcome.display" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display the introduction screen of application</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="welcome.main">
+<code class="descclassname">welcome.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#welcome.main" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates the framework for the graphical user interface. Using the GUI, the admin
+and the user can login to run the compliance test. The GUI would create a portal to ask for the
+login credentials of anyone who wishes to run the compliance test.</p>
+</dd></dl>
+
+<span class="target" id="module-login"></span><dl class="function">
+<dt id="login.check_password">
+<code class="descclassname">login.</code><code class="descname">check_password</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#login.check_password" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function checks the login credentials and displays access based menus</p>
+</dd></dl>
+
+<span class="target" id="module-database_creator"></span><dl class="function">
+<dt id="database_creator.check">
+<code class="descclassname">database_creator.</code><code class="descname">check</code><span class="sig-paren">(</span><em>name</em>, <em>password</em><span class="sig-paren">)</span><a class="headerlink" href="#database_creator.check" title="Permalink to this definition">¶</a></dt>
+<dd><p>THe function checks the login credentials of the user and returns the role of the user</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="database_creator.create_table">
+<code class="descclassname">database_creator.</code><code class="descname">create_table</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#database_creator.create_table" title="Permalink to this definition">¶</a></dt>
+<dd><p>It creates a new table of users</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="database_creator.delete">
+<code class="descclassname">database_creator.</code><code class="descname">delete</code><span class="sig-paren">(</span><em>name</em>, <em>role</em><span class="sig-paren">)</span><a class="headerlink" href="#database_creator.delete" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function enables the admin to delete any existing users who have access to the compliance test</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="database_creator.insert">
+<code class="descclassname">database_creator.</code><code class="descname">insert</code><span class="sig-paren">(</span><em>name</em>, <em>password</em>, <em>role</em><span class="sig-paren">)</span><a class="headerlink" href="#database_creator.insert" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function enables the admin to add the login credentials of the user and his/her role to the list of existing
+users who have access to the compliance test</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="database_creator.list_dir">
+<code class="descclassname">database_creator.</code><code class="descname">list_dir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#database_creator.list_dir" title="Permalink to this definition">¶</a></dt>
+<dd><p>It lists down the final templates which are used for comparison.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="database_creator.view">
+<code class="descclassname">database_creator.</code><code class="descname">view</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#database_creator.view" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function enables the admin to view the existing users who have access to the compliance test</p>
+</dd></dl>
+
+<span class="target" id="module-eg"></span><dl class="function">
+<dt id="eg.admin">
+<code class="descclassname">eg.</code><code class="descname">admin</code><span class="sig-paren">(</span><em>user</em><span class="sig-paren">)</span><a class="headerlink" href="#eg.admin" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates the options for the user and the admin. Only the unetwork
+admin can see the existing user details or even add/delete users and even run the compliance test.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="eg.user">
+<code class="descclassname">eg.</code><code class="descname">user</code><span class="sig-paren">(</span><em>user</em><span class="sig-paren">)</span><a class="headerlink" href="#eg.user" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates the options for the user. The user can only run the compliance test.</p>
+</dd></dl>
+
+<span class="target" id="module-initiate"></span><dl class="function">
+<dt id="initiate.compare_config">
+<code class="descclassname">initiate.</code><code class="descname">compare_config</code><span class="sig-paren">(</span><em>current_path</em>, <em>old_path</em>, <em>ip</em><span class="sig-paren">)</span><a class="headerlink" href="#initiate.compare_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function &#8216;compare_config&#8217; creates two files corresponding to the current and previous versions of the configuration
+files for each of the router. It then compares these two files and prints out the differences between these two versions
+and retains files for both the current and the previous versions and sends these differences to the network admin
+via both email and text to his/her cellphone.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="initiate.compare_templates">
+<code class="descclassname">initiate.</code><code class="descname">compare_templates</code><span class="sig-paren">(</span><em>current_template</em>, <em>root_template</em>, <em>ip</em><span class="sig-paren">)</span><a class="headerlink" href="#initiate.compare_templates" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function compares the templates for the orginal start-up config file and the current start-up config file
+corresponding to the router associated with the IP being passed. Those templates that match the original template are
+flagged with 1 and those that do not, are flagged with 0.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="initiate.display_topology">
+<code class="descclassname">initiate.</code><code class="descname">display_topology</code><span class="sig-paren">(</span><em>list_red</em>, <em>list_green</em><span class="sig-paren">)</span><a class="headerlink" href="#initiate.display_topology" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates the topology showing the compliant routers in red and the con-compliant routers in red.
+Each router is labelled with its respective management IP. The spring nature of topology places the routers in
+the network in a random manner such that router 1 is connected to router 2, which in turn is connected to router 3.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="initiate.get_templates">
+<code class="descclassname">initiate.</code><code class="descname">get_templates</code><span class="sig-paren">(</span><em>ip</em><span class="sig-paren">)</span><a class="headerlink" href="#initiate.get_templates" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function checks if the template for the orginal start-up config file exists for each of the 3 routers. If not, it
+downloads and saves the original start-up config file from each of the routers and creates a reference template for all 3.
+If it exists, it downloads and saves the current start-up config file and creates the template from it thereafter. Now it
+compares this new template with the reference template.Additionally, the original start-up and the crrent start-up config
+files are also compared.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="initiate.make_templates">
+<code class="descclassname">initiate.</code><code class="descname">make_templates</code><span class="sig-paren">(</span><em>path</em>, <em>flag</em><span class="sig-paren">)</span><a class="headerlink" href="#initiate.make_templates" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates the templates for the orginal start-up config file and the current start-up config file
+of the router corresponding to the IP being passed. These templates would check the number of networks issues under the routing
+protocols like RIP,OSPF and also check for route redistribution and SNMP configurations.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="initiate.send_mail">
+<code class="descclassname">initiate.</code><code class="descname">send_mail</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#initiate.send_mail" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function sends an e-mail using SMTP to a network admin with information regarding the configuration
+mismatch between the current start-up config and the original sart-up config.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="initiate.sla_status">
+<code class="descclassname">initiate.</code><code class="descname">sla_status</code><span class="sig-paren">(</span><em>action_set</em><span class="sig-paren">)</span><a class="headerlink" href="#initiate.sla_status" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates a red circle indicating SLA violation and  a green circle to indicate
+SLA conformity.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="initiate.take_topology_decision">
+<code class="descclassname">initiate.</code><code class="descname">take_topology_decision</code><span class="sig-paren">(</span><em>ip_flag</em><span class="sig-paren">)</span><a class="headerlink" href="#initiate.take_topology_decision" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function creates a list of the flags associated with each router. The 1st value, 2nd value, 3rd value of the list to
+the 1st, 3rd and 2nd router respectively. Depending on these values, the compliant routers are marked to be colored in green and the non-compliant routers are marked
+to be colored in red.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="initiate.write_topology_information">
+<code class="descclassname">initiate.</code><code class="descname">write_topology_information</code><span class="sig-paren">(</span><em>flag</em>, <em>ip</em><span class="sig-paren">)</span><a class="headerlink" href="#initiate.write_topology_information" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function updates the dictionary such that every management IP is tagged with a flag. If the flag for a
+router has not been received, it is automatically initialized with a flag of 2. It is ony when the final flag of the
+IP is either 0 or 1, the final compliance test results are dispalyed in the form of a connected topology with red and
+green routers.</p>
+</dd></dl>
+
+<span class="target" id="module-twilio_module"></span><dl class="function">
+<dt id="twilio_module.inform_phone">
+<code class="descclassname">twilio_module.</code><code class="descname">inform_phone</code><span class="sig-paren">(</span><em>message</em><span class="sig-paren">)</span><a class="headerlink" href="#twilio_module.inform_phone" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is used to call or send a message to a network admin with certain details.
+Uses the twilio module.</p>
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="project.html"
+                        title="previous chapter">Project Summary</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/code.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="project.html" title="Project Summary"
+             >previous</a> |</li>
+        <li><a href="index.html">Compliance Checker 1.0.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2014, Debasmita Hazra.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3b1.
+    </div>
+  </body>
+</html>

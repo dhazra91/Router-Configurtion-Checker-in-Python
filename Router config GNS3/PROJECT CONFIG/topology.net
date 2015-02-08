@@ -1,0 +1,59 @@
+autostart = False
+version = 0.8.3
+[127.0.0.1:7200]
+    workingdir = /tmp
+    udp = 10000
+    [[3640]]
+        image = /home/netman/GNS3/Images/c3640-jk9o3s-mz.124-13a.image
+        idlepc = 0x603dd778
+        sparsemem = True
+        ghostios = True
+        chassis = 3640
+    [[ETHSW SW1]]
+        1 = access 1 R1 f0/0
+        2 = access 1 R2 f0/0
+        3 = access 1 R3 f0/0
+        4 = access 1 nio_tap:tap0
+        x = 191.5
+        y = -333.0
+        z = 1.0
+    [[ROUTER R1]]
+        model = 3640
+        console = 2001
+        aux = 2501
+        cnfg = configs/R1.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = SW1 1
+        slot1 = NM-1FE-TX
+        x = 109.0
+        y = -420.0
+        z = 1.0
+    [[ROUTER R2]]
+        model = 3640
+        console = 2002
+        aux = 2502
+        cnfg = configs/R2.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = SW1 2
+        slot1 = NM-1FE-TX
+        x = 269.0
+        y = -432.0
+        z = 1.0
+    [[ROUTER R3]]
+        model = 3640
+        console = 2003
+        aux = 2503
+        cnfg = configs/R3.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = SW1 3
+        slot1 = NM-1FE-TX
+        x = 359.0
+        y = -361.0
+        z = 1.0
+[GNS3-DATA]
+    configs = configs
+    [[Cloud C1]]
+        x = -59.5
+        y = -379.0
+        z = 1.0
+        connections = SW1:4:nio_tap:tap0

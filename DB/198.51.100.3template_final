@@ -1,0 +1,174 @@
+!
+!
+version 12.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+no service password-encryption
+!
+hostname XXX!
+boot-start-marker
+boot-end-marker
+!
+!
+no aaa new-model
+memory-size iomem 5
+!
+!
+ip cef
+no ip domain lookup
+ip domain name XXX
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface Loopback1
+ip address XXX XXX
+!
+interface FastEthernet0/0
+ip address XXX XXX
+duplex auto
+speed auto
+!
+interface FastEthernet1/0
+description asda
+no ip address
+duplex auto
+speed auto
+!
+router rip
+
+version XXX
+network XXX
+network XXX
+no auto-summary
+!
+no ip http server
+no ip http secure-server
+!
+!
+!
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+snmp-server  XXX
+!
+!
+tftp-server nvram:/startup-config
+!
+control-plane
+!
+rmon event XXX
+rmon alarm XXX
+!
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+exec-timeout 0 0
+privilege level 15
+logging synchronous
+line aux 0
+exec-timeout 0 0
+privilege level 15
+logging synchronous
+line vty 0 4
+login
+!
+!
+end

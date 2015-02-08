@@ -1,0 +1,4 @@
+Introduction
+============
+
+While doing the Telecom System Laboratory in ITP, I wasted a lot of hours on doing same configuration again as people did not delete or clear the configuration i.e I had an undesired configuration. Thus, I thought about developing a system which will detect this anomaly and report it so as to improve the efficiency of the lab ecosystem. This can be applied to check any predefined configuration in general. If there is a base topology configured comprising of routing protocols, this project would create a template for the original start-up config file. Thereafter, if any of the routers undergo a change of configuration, a template would be built from the current start-up configuration as well and this new template and the reference template would be compared to identify the changed router. Additionally, the oroginal start-up config and the current start-up config would be compared to identify the exact changes.
